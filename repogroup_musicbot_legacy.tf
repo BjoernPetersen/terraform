@@ -42,6 +42,17 @@ module "musicbot_desktop_repo" {
   is_archived            = true
 }
 
+module "musicbot_kiu_repo" {
+  source                 = "github.com/BlindfoldedSurgery/terraform-repo-module?ref=v4.0.1"
+  name                   = "Kiu"
+  default_branch_name    = "master"
+  description            = "MusicBot client for Android"
+  required_status_checks = []
+  blocked_branches       = []
+  enable_actions         = false
+  is_archived            = false
+}
+
 module "musicbot_plugins_repo" {
   source                 = "github.com/BlindfoldedSurgery/terraform-repo-module?ref=v4.0.1"
   name                   = "MusicBot-plugins"

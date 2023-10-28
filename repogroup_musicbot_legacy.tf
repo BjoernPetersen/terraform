@@ -27,6 +27,7 @@ module "musicbot_bundler_repo" {
   required_status_checks = []
   blocked_branches       = []
   enable_actions         = false
+  is_public              = false
   is_archived            = true
 }
 

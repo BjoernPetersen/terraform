@@ -50,7 +50,7 @@ module "musicbot_kiu_repo" {
   required_status_checks = []
   blocked_branches       = []
   enable_actions         = false
-  is_archived            = false
+  is_archived            = true
 }
 
 module "musicbot_plugins_repo" {

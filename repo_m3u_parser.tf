@@ -4,8 +4,9 @@ module "m3u_parser_repo" {
   description        = "An M3U parser written in Kotlin"
   enable_discussions = true
   required_status_checks = [
-    "Test and Lint",
     "codecov/patch",
+    "SonarCloud Code Analysis",
+    "Test and Lint",
     "WIP",
   ]
 }

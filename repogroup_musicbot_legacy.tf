@@ -6,7 +6,7 @@ module "musicbot_repo" {
   required_status_checks = []
   blocked_branches       = []
   enable_actions         = false
-  is_archived            = false
+  is_archived            = true
 }
 
 module "musicbot_api_repo" {
@@ -17,7 +17,7 @@ module "musicbot_api_repo" {
   required_status_checks = []
   blocked_branches       = []
   enable_actions         = false
-  is_archived            = false
+  is_archived            = true
 }
 
 module "musicbot_bundler_repo" {
@@ -27,7 +27,7 @@ module "musicbot_bundler_repo" {
   required_status_checks = []
   blocked_branches       = []
   enable_actions         = false
-  is_archived            = false
+  is_archived            = true
 }
 
 module "musicbot_desktop_repo" {
@@ -38,7 +38,7 @@ module "musicbot_desktop_repo" {
   required_status_checks = []
   blocked_branches       = []
   enable_actions         = false
-  is_archived            = false
+  is_archived            = true
 }
 
 module "musicbot_plugins_repo" {
@@ -49,7 +49,7 @@ module "musicbot_plugins_repo" {
   required_status_checks = []
   blocked_branches       = []
   enable_actions         = false
-  is_archived            = false
+  is_archived            = true
 }
 
 module "musicbot_qbert_repo" {
@@ -60,5 +60,5 @@ module "musicbot_qbert_repo" {
   required_status_checks = []
   blocked_branches       = []
   enable_actions         = false
-  is_archived            = false
+  is_archived            = true
 }

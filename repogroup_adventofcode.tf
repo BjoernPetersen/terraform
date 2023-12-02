@@ -1,27 +1,27 @@
 module "adventofcode_repo" {
   for_each = {
     "2018" = {
-      is_archived = false,
+      is_archived = true,
       is_public   = false,
       language    = "Dart"
     },
     "2019" = {
-      is_archived = false,
+      is_archived = true,
       is_public   = true,
       language    = "Dart"
     },
     "2020" = {
-      is_archived = false,
+      is_archived = true,
       is_public   = true,
       language    = "Rust"
     },
     "2021" = {
-      is_archived = false,
+      is_archived = true,
       is_public   = false,
       language    = "Python"
     },
     "2022" = {
-      is_archived = false,
+      is_archived = true,
       is_public   = true,
       language    = "Python"
     },

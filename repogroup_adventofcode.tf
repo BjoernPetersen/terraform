@@ -21,7 +21,7 @@ module "adventofcode_repo" {
       language    = "Python"
     },
     "2022" = {
-      is_archived = true,
+      is_archived = false,
       is_public   = true,
       language    = "Python"
     },

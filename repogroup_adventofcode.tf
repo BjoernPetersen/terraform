@@ -35,10 +35,10 @@ module "adventofcode_repo" {
       is_public   = true,
       language    = "Dart",
       status_checks = [
-        "validate-renovate-config",
-        "test",
-        "check-format",
-        "lint",
+        "Validate Renovate configuration / validate",
+        "Test",
+        "Check Format",
+        "Lint",
       ],
     },
   }

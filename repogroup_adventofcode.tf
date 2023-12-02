@@ -31,9 +31,9 @@ module "adventofcode_repo" {
       status_checks = [],
     },
     "2023" = {
-      is_archived   = false,
-      is_public     = true,
-      language      = "Dart",
+      is_archived = false,
+      is_public   = true,
+      language    = "Dart",
       status_checks = [
         "validate-renovate-config",
         "test",

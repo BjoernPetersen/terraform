@@ -25,6 +25,11 @@ module "adventofcode_repo" {
       is_public   = true,
       language    = "Python"
     },
+    "2023" = {
+      is_archived = true,
+      is_public   = true,
+      language    = "Dart"
+    },
   }
 
   source                 = "github.com/BlindfoldedSurgery/terraform-repo-module?ref=v5.0.0"

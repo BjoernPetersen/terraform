@@ -4,6 +4,7 @@ module "spotify_api_repo" {
   description        = "Spotify Web API wrapper for Dart"
   enable_discussions = true
   required_status_checks = [
+    "Validate Renovate configuration / validate",
     "Lint",
     "Test",
     "Integration Tests",

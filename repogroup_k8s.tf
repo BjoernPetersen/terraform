@@ -13,9 +13,9 @@ module "k8s_repos" {
       description = "Namespaces and permissions as code for home k8s cluster",
     },
   }
-  source                 = "github.com/BlindfoldedSurgery/terraform-repo-module?ref=v7.0.0"
-  name                   = each.key
-  description            = each.value.description
+  source      = "github.com/BlindfoldedSurgery/terraform-repo-module?ref=v7.0.0"
+  name        = each.key
+  description = each.value.description
   required_status_checks = [
     "lint",
   ]

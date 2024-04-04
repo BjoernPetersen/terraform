@@ -1,5 +1,8 @@
 module "k8s_repos" {
   for_each = {
+    "k8s-argocd" : {
+      description = "ArgoCD for home k8s cluster",
+    },
     "k8s-certmanager" : {
       description = "Cert-Manager installation for home k8s cluster",
     },

@@ -19,4 +19,5 @@ module "k8s_repos" {
   required_status_checks = [
     "lint",
   ]
+  is_public = false
 }

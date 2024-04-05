@@ -13,9 +13,6 @@ module "k8s_repos" {
     "k8s-gateway" : {
       description = "Gateway ingresses on home k8s cluster"
     }
-    "k8s-github-runner" : {
-      description = "Self-hosted GitHub Runner Controller in home k8s cluster"
-    }
     "k8s-namespaces" : {
       description = "Namespaces and permissions as code for home k8s cluster"
     }

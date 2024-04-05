@@ -1,5 +1,5 @@
 module "helm_repo" {
-  source      = "github.com/BlindfoldedSurgery/terraform-repo-module?ref=v7.0.0"
+  source      = "github.com/BlindfoldedSurgery/terraform-repo-module?ref=v7.1.0"
   name        = "container-helm"
   description = "Container image based on Debian with kubectl and helm installed"
   required_status_checks = [

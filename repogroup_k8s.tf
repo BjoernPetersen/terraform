@@ -5,6 +5,7 @@ module "k8s_repos" {
     }
     "k8s-argocd-applicationsets" : {
       description = "ArgoCD ApplicationSets"
+      enable_actions : false
     }
     "k8s-certmanager" : {
       description = "Cert-Manager installation for home k8s cluster"
@@ -25,5 +26,6 @@ module "k8s_repos" {
   required_status_checks = [
     "lint",
   ]
-  is_public = false
+  is_public      = false
+  enable_actions = lookup(each.value, "enable_actions", true)
 }

@@ -18,6 +18,7 @@ module "k8s_repos" {
     }
     "k8s-postgres" : {
       description = "Postgres Operator setup for home k8s server"
+      enable_actions : false
     }
   }
   source      = "github.com/BlindfoldedSurgery/terraform-repo-module?ref=v7.1.1"

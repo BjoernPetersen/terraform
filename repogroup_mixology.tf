@@ -7,7 +7,8 @@ module "mixology_api_repo" {
   required_status_checks = [
     "check-format",
     "lint",
-    "build-app-image",
+    "build-app-image / build",
+    "build-migrations-image / build",
     "WIP",
   ]
 }

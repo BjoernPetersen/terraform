@@ -16,6 +16,9 @@ module "k8s_repos" {
     "k8s-namespaces" : {
       description = "Namespaces and permissions as code for home k8s cluster"
     }
+    "k8s-postgres" : {
+      description = "Postgres Operator setup for home k8s server"
+    }
   }
   source      = "github.com/BlindfoldedSurgery/terraform-repo-module?ref=v7.1.1"
   name        = each.key

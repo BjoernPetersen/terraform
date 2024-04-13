@@ -9,7 +9,6 @@ module "mixology_api_repo" {
     "lint",
     "build-app-image / build",
     "build-migrations-image / build",
-    "WIP",
   ]
 }
 
@@ -24,6 +23,5 @@ module "mixology_frontend_repo" {
     "Lint",
     "Build Web Package",
     "Build Container Package",
-    "WIP",
   ]
 }

@@ -6,6 +6,7 @@ module "k8s_repos" {
     "k8s-argocd-applicationsets" : {
       description = "ArgoCD ApplicationSets"
       enable_actions : false
+      required_status_checks = []
     }
     "k8s-certmanager" : {
       description = "Cert-Manager installation for home k8s cluster"
@@ -19,14 +20,19 @@ module "k8s_repos" {
     "k8s-postgres" : {
       description = "Postgres Operator setup for home k8s server"
       enable_actions : false
+      required_status_checks = []
     }
   }
   source      = "github.com/BlindfoldedSurgery/terraform-repo-module?ref=v7.1.1"
   name        = each.key
   description = each.value.description
-  required_status_checks = [
-    "lint",
-  ]
+  required_status_checks = lookup(
+    each.value,
+    "required_status_checks",
+    [
+      "lint",
+    ],
+  )
   is_public      = false
   enable_actions = lookup(each.value, "enable_actions", true)
 }

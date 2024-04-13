@@ -1,8 +1,9 @@
 module "mixology_api_repo" {
-  source       = "github.com/BlindfoldedSurgery/terraform-repo-module?ref=v7.1.1"
-  name         = "mixology-api"
-  description  = "Remixes your Spotify playlists"
-  homepage_url = "https://mix-api.bembel.party/"
+  source              = "github.com/BlindfoldedSurgery/terraform-repo-module?ref=v7.1.1"
+  name                = "mixology-api"
+  description         = "Remixes your Spotify playlists"
+  homepage_url        = "https://mix-api.bembel.party/"
+  enable_argocd_rules = true
   required_status_checks = [
     "check-format",
     "lint",
@@ -12,10 +13,11 @@ module "mixology_api_repo" {
 }
 
 module "mixology_frontend_repo" {
-  source       = "github.com/BlindfoldedSurgery/terraform-repo-module?ref=v7.1.1"
-  name         = "mixology-frontend"
-  description  = "The Mixology frontend"
-  homepage_url = "https://mix.bembel.party"
+  source              = "github.com/BlindfoldedSurgery/terraform-repo-module?ref=v7.1.1"
+  name                = "mixology-frontend"
+  description         = "The Mixology frontend"
+  homepage_url        = "https://mix.bembel.party"
+  enable_argocd_rules = true
   required_status_checks = [
     "Check Format",
     "Lint",

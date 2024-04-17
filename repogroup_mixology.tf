@@ -22,6 +22,6 @@ module "mixology_frontend_repo" {
     "Check Format",
     "Lint",
     "Build Web Package",
-    "Build Container Package",
+    "build-container-image",
   ]
 }

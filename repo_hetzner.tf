@@ -6,8 +6,8 @@ module "hetzner_repo" {
     "validate",
     "plan",
   ]
-  description    = "Hetzner Cloud resources"
-  is_public = false
+  description = "Hetzner Cloud resources"
+  is_public   = false
 }
 
 resource "google_service_account" "hetzner" {

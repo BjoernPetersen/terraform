@@ -3,7 +3,6 @@ module "sane_uuid_repo" {
   name               = "sane_uuid"
   description        = "UUID generation and parsing with a sane interface"
   enable_discussions = true
-  enable_projects    = true
   required_status_checks = [
     "validate-renovate-config / validate",
     "Lint",

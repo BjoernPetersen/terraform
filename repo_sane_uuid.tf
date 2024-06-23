@@ -5,9 +5,11 @@ module "sane_uuid_repo" {
   enable_discussions = true
   enable_projects    = true
   required_status_checks = [
+    "validate-renovate-config / validate",
     "Lint",
     "Test",
     "Check Format",
     "WIP",
+    "codecov/patch",
   ]
 }

@@ -2,6 +2,7 @@ module "spotify_api_repo" {
   source             = "github.com/BlindfoldedSurgery/terraform-repo-module?ref=v7.1.1"
   name               = "spotify_api"
   description        = "Spotify Web API wrapper for Dart"
+  homepage_url       = "https://pub.dev/packages/spotify_api"
   enable_discussions = true
   required_status_checks = [
     "validate-renovate-config / validate",

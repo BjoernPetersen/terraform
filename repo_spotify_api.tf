@@ -6,6 +6,7 @@ module "spotify_api_repo" {
   enable_discussions = true
   required_status_checks = [
     "validate-renovate-config / validate",
+    "check-commits / check",
     "Lint",
     "Test",
     "Integration Tests",

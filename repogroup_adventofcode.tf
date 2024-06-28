@@ -49,4 +49,5 @@ module "adventofcode_repo" {
   required_status_checks = each.value.status_checks
   is_archived            = each.value.is_archived
   is_public              = each.value.is_public
+  enable_argocd_rules    = false
 }

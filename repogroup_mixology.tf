@@ -21,7 +21,6 @@ module "mixology_frontend_repo" {
   required_status_checks = [
     "Check Format",
     "Lint",
-    "Build Web Package",
-    "build-container-image",
+    "build-container-image / build",
   ]
 }

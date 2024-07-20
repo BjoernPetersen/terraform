@@ -8,9 +8,6 @@ module "k8s_repos" {
       enable_actions : false
       required_status_checks = []
     }
-    "k8s-certmanager" : {
-      description = "Cert-Manager installation for home k8s cluster"
-    }
     "k8s-gateway" : {
       description = "Gateway ingresses on home k8s cluster"
     }
@@ -18,7 +15,7 @@ module "k8s_repos" {
       description = "Namespaces and permissions as code for home k8s cluster"
     }
     "k8s-postgres" : {
-      description = "Postgres Operator setup for home k8s server"
+      description = "Postgres database chart for home k8s setup"
       enable_actions : false
       required_status_checks = []
     }

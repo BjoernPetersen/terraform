@@ -6,5 +6,6 @@ module "shutdown_server_repo" {
   default_branch_name    = "master"
   blocked_branches       = []
   enable_argocd_rules    = false
+  is_archived = true
 }
 

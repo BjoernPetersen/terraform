@@ -4,7 +4,7 @@ module "k8s_repos" {
       description = "ArgoCD for home k8s cluster"
     }
     "k8s-argocd-applicationsets" : {
-      description = "ArgoCD ApplicationSets"
+      description = "ArgoCD Applications for home k8s cluster"
       enable_actions : false
       required_status_checks = []
     }

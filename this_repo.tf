@@ -10,28 +10,19 @@ module "self_repo" {
   enable_actions = true
 }
 
-resource "google_service_account" "self" {
-  account_id   = "github-actions-ci-terraform"
-  display_name = "GitHub Actions terraform repo"
-}
 
-resource "google_project_iam_member" "self_roles" {
-  for_each = toset([
+module "self_terraform" {
+  source       = "./modules/terraform_state_access"
+  display_name = "GitHub Actions self/terraform"
+  identifier   = "self-terraform"
+  additional_roles = [
     "roles/iam.securityReviewer",
     "roles/iam.serviceAccountViewer",
-    "roles/storage.objectAdmin",
-  ])
-  project = google_service_account.self.project
-  role    = each.key
-  member  = google_service_account.self.member
-}
-
-resource "google_service_account_key" "self" {
-  service_account_id = google_service_account.self.account_id
+  ]
 }
 
 resource "github_actions_secret" "self_gsa" {
   repository      = module.self_repo.name
   secret_name     = "GOOGLE_SA_JSON"
-  plaintext_value = base64decode(google_service_account_key.self.private_key)
+  plaintext_value = module.self_terraform.private_key
 }

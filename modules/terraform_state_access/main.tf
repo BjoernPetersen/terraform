@@ -4,9 +4,12 @@ resource "google_service_account" "main" {
 }
 
 resource "google_project_iam_member" "main" {
-  for_each = toset([
-    "roles/storage.objectAdmin",
-  ])
+  for_each = toset(concat(
+    var.additional_roles,
+    [
+      "roles/storage.objectAdmin",
+    ],
+  ))
   project = google_service_account.main.project
   role    = each.key
   member  = google_service_account.main.member

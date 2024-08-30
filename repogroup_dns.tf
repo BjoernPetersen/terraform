@@ -34,3 +34,10 @@ module "dns_repo_gsa" {
   identifier   = each.value.gsa_identifier
   display_name = "GitHub Actions self/${each.key}"
 }
+
+resource "github_actions_secret" "azure_infrastructure_gsa" {
+  for_each        = local.dns_repos
+  repository      = each.key
+  secret_name     = "GOOGLE_SA_JSON"
+  plaintext_value = module.dns_repo_gsa[each.key].private_key
+}

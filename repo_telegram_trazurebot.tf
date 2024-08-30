@@ -5,8 +5,3 @@ module "transbot_repo" {
   is_public           = false
   enable_argocd_rules = true
 }
-
-import {
-  to = module.transbot_repo.github_repository.main
-  id = "telegram-trazurebot"
-}

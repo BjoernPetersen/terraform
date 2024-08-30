@@ -3,7 +3,9 @@ module "azure_infrastructure_repo" {
   name        = "azure-infrastructure"
   description = "Basic infrastructure in Azure for personal projects"
   required_status_checks = [
-    "fmt", "validate"
+    "fmt",
+    "validate",
+    "plan",
   ]
   is_public = false
 }

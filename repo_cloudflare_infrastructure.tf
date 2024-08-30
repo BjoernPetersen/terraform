@@ -3,7 +3,9 @@ module "cloudflare_infrastructure_repo" {
   name        = "cloudflare-infrastructure"
   description = "Basic infrastructure in Cloudflare for personal projects"
   required_status_checks = [
-    "fmt", "validate"
+    "fmt",
+    "validate",
+    "plan",
   ]
   is_public = false
 }

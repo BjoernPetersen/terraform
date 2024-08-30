@@ -34,3 +34,14 @@ provider "google" {
   project = "personal-bjoernpetersen"
   region  = "europe-west3"
 }
+
+resource "google_project_service" "services" {
+  for_each = toset([
+    "cloudresourcemanager.googleapis.com",
+    "iam.googleapis.com",
+    "storage-api.googleapis.com",
+    "storage-component.googleapis.com",
+    "storage.googleapis.com",
+  ])
+  service = each.key
+}

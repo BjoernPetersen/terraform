@@ -17,8 +17,17 @@ terraform {
   }
 }
 
+locals {
+  gh_app_id = "Iv23liJetiEvpfGLLen0"
+}
+
 provider "github" {
   owner = "bjoernpetersen"
+  app_auth {
+    id              = local.gh_app_id
+    pem_file        = null
+    installation_id = "54328403"
+  }
 }
 
 provider "google" {

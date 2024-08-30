@@ -20,6 +20,8 @@ jobs:
       - uses: asdf-vm/actions/install@v3
       - run: terraform init -backend=false
       - run: terraform validate
+        env:
+          GITHUB_APP_PEM_FILE: ${{ secrets.GH_APP_PEM_FILE }}
 
   plan:
     runs-on: ubuntu-latest

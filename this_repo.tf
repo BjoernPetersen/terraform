@@ -1,5 +1,5 @@
 module "self_repo" {
-  source = "github.com/BlindfoldedSurgery/terraform-repo-module?ref=v7.2.0"
+  source = "github.com/BlindfoldedSurgery/terraform-repo-module?ref=v7.3.2"
   name   = "terraform"
   required_status_checks = [
     "fmt",

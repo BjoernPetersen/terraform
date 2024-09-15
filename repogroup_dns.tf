@@ -17,7 +17,7 @@ locals {
 
 module "dns_repos" {
   for_each     = local.dns_repos
-  source       = "github.com/BlindfoldedSurgery/terraform-repo-module?ref=v7.2.0"
+  source       = "github.com/BlindfoldedSurgery/terraform-repo-module?ref=v7.3.2"
   name         = each.key
   homepage_url = "https://${each.value.domain}"
   required_status_checks = [

@@ -1,5 +1,5 @@
 module "mixology_api_repo" {
-  source              = "github.com/BlindfoldedSurgery/terraform-repo-module?ref=v7.2.0"
+  source              = "github.com/BlindfoldedSurgery/terraform-repo-module?ref=v7.3.2"
   name                = "mixology-api"
   description         = "Remixes your Spotify playlists"
   homepage_url        = "https://mix-api.bembel.party/"
@@ -13,7 +13,7 @@ module "mixology_api_repo" {
 }
 
 module "mixology_frontend_repo" {
-  source              = "github.com/BlindfoldedSurgery/terraform-repo-module?ref=v7.2.0"
+  source              = "github.com/BlindfoldedSurgery/terraform-repo-module?ref=v7.3.2"
   name                = "mixology-frontend"
   description         = "The Mixology frontend"
   homepage_url        = "https://mix.bembel.party"

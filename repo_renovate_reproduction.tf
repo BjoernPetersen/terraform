@@ -6,3 +6,8 @@ module "renovate_reproduction_repo" {
   enable_argocd_rules    = false
   required_status_checks = []
 }
+
+import {
+  id = "renovate-reproduction"
+  to = module.renovate_reproduction_repo.github_repository.main
+}

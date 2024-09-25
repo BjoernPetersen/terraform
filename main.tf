@@ -23,7 +23,7 @@ locals {
 }
 
 provider "github" {
-  owner = "bjoernpetersen"
+  owner = "BjoernPetersen"
   app_auth {
     id              = local.gh_app_id
     pem_file        = null

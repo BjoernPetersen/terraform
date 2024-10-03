@@ -1,0 +1,15 @@
+module "nightscout_repo" {
+  source      = "github.com/BlindfoldedSurgery/terraform-repo-module?ref=v7.3.2"
+  name        = "nightscout-helm"
+  description = "Helm Chart for Nightscout"
+
+  is_public           = false
+  enable_argocd_rules = false
+
+  required_status_checks = []
+}
+
+import {
+  id = "nightscout-helm"
+  to = module.nightscout_repo.github_repository.main
+}

@@ -1,5 +1,5 @@
 module "terraform_provider_homeassistant_repo" {
-  source              = "github.com/BlindfoldedSurgery/terraform-repo-module?ref=v7.3.2"
+  source              = "github.com/BlindfoldedSurgery/terraform-repo-module?ref=v7.3.3"
   name                = "terraform-provider-homeassistant"
   description         = "Terraform Provider for Home-Assistant"
   enable_argocd_rules = false

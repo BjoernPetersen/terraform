@@ -8,6 +8,10 @@ locals {
       domain         = "bjoernpetersen.net"
       gsa_identifier = "self-dns"
     }
+    "bs-dns-config" : {
+      domain         = "blindfolded.surgery"
+      gsa_identifier = "bs-dns"
+    }
     "wg-dns-config" : {
       domain         = "kasino-wg.party"
       gsa_identifier = "wg-dns"
@@ -40,4 +44,6 @@ resource "github_actions_secret" "dns_repo_gsa" {
   repository      = each.key
   secret_name     = "GOOGLE_SA_JSON"
   plaintext_value = module.dns_repo_gsa[each.key].private_key
+
+  depends_on = [module.dns_repos]
 }

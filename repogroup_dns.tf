@@ -20,16 +20,20 @@ locals {
 }
 
 module "dns_repos" {
-  for_each     = local.dns_repos
+  for_each = local.dns_repos
+
   source       = "github.com/BlindfoldedSurgery/terraform-repo-module?ref=v7.3.3"
   name         = each.key
   homepage_url = "https://${each.value.domain}"
+
+  is_public           = false
+  enable_argocd_rules = false
+
   required_status_checks = [
     "fmt",
     "validate",
     "plan",
   ]
-  is_public = false
 }
 
 module "dns_repo_gsa" {

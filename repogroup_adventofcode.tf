@@ -43,7 +43,7 @@ module "adventofcode_repo" {
     },
     "2024" = {
       is_archived = false,
-      is_public   = false,
+      is_public   = true,
       language    = "Dart",
       status_checks = [
         "Validate Renovate configuration / validate",

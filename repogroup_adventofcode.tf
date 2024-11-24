@@ -49,7 +49,7 @@ module "adventofcode_repo" {
         "Validate Renovate configuration / validate",
         "Test",
         "Check Format",
-        "Lint",
+        "Build Binary",
       ],
     },
   }

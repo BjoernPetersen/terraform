@@ -41,6 +41,17 @@ module "adventofcode_repo" {
         "Lint",
       ],
     },
+    "2024" = {
+      is_archived = false,
+      is_public   = false,
+      language    = "Dart",
+      status_checks = [
+        "Validate Renovate configuration / validate",
+        "Test",
+        "Check Format",
+        "Lint",
+      ],
+    },
   }
 
   source                 = "github.com/BlindfoldedSurgery/terraform-repo-module?ref=v7.3.3"

@@ -1,5 +1,5 @@
 module "oauth_ingress_helm_repo" {
-  source = "github.com/BlindfoldedSurgery/terraform-repo-module?ref=v7.3.3"
+  source = "github.com/BlindfoldedSurgery/terraform-repo-module?ref=v7.4.0"
   name   = "oauth-ingress-helm"
 
   is_public           = false

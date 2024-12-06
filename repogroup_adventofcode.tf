@@ -45,7 +45,7 @@ module "adventofcode_repo" {
       is_archived = false,
       is_public   = true,
       language    = "Dart",
-      homepage    = "https://aoc.bjoernpetersen.net/2024/
+      homepage    = "https://aoc.bjoernpetersen.net/2024/"
       status_checks = [
         "Validate Renovate configuration / validate",
         "Test",
@@ -55,12 +55,14 @@ module "adventofcode_repo" {
     },
   }
 
-  source                 = "github.com/BlindfoldedSurgery/terraform-repo-module?ref=v7.4.0"
-  name                   = "advent-of-code-${each.key}"
-  description            = "Advent of Code ${each.key} solutions written in ${each.value.language}"
+  source      = "github.com/BlindfoldedSurgery/terraform-repo-module?ref=v7.4.0"
+  name        = "advent-of-code-${each.key}"
+  description = "Advent of Code ${each.key} solutions written in ${each.value.language}"
+
   required_status_checks = each.value.status_checks
   is_archived            = each.value.is_archived
   is_public              = each.value.is_public
-  homepage               = each.value["homepage"]
-  enable_argocd_rules    = false
+  homepage_url           = each.value["homepage"]
+
+  enable_argocd_rules = false
 }

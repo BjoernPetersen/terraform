@@ -6,15 +6,19 @@ on:
   pull_request: { }
 
 jobs:
+  required-meta:
+    name: Validate Renovate configuration
+    uses: BlindfoldedSurgery/actions-meta/.github/workflows/required.yml@v1
+
   fmt:
-    runs-on: ubuntu-latest
+    runs-on: ubuntu-24.04
     steps:
       - uses: actions/checkout@v4
       - uses: asdf-vm/actions/install@v3
       - run: terraform fmt -check -recursive
 
   validate:
-    runs-on: ubuntu-latest
+    runs-on: ubuntu-24.04
     steps:
       - uses: actions/checkout@v4
       - uses: asdf-vm/actions/install@v3
@@ -24,10 +28,13 @@ jobs:
           GITHUB_APP_PEM_FILE: ${{ secrets.GH_APP_PEM_FILE }}
 
   plan:
-    runs-on: ubuntu-latest
-    needs: [fmt, validate]
+    runs-on: ubuntu-24.04
+    needs:
+      - fmt
+      - validate
+      - required-meta
     concurrency: production
-    if: success() && github.ref != 'refs/heads/main'
+    if: github.event_name == 'pull_request'
     env:
       GOOGLE_CREDENTIALS: ${{ secrets.GOOGLE_SA_JSON }}
       GITHUB_APP_PEM_FILE: ${{ secrets.GH_APP_PEM_FILE }}
@@ -38,10 +45,13 @@ jobs:
       - run: terraform plan
 
   apply:
-    runs-on: ubuntu-latest
-    needs: [fmt, validate]
+    runs-on: ubuntu-24.04
+    needs:
+      - fmt
+      - validate
+      - required-meta
     concurrency: production
-    if: success() && github.ref == 'refs/heads/main'
+    if: github.ref_name == github.event.repository.default_branch
     env:
       GOOGLE_CREDENTIALS: ${{ secrets.GOOGLE_SA_JSON }}
       GITHUB_APP_PEM_FILE: ${{ secrets.GH_APP_PEM_FILE }}

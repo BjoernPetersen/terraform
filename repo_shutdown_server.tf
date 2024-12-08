@@ -1,5 +1,5 @@
 module "shutdown_server_repo" {
-  source              = "github.com/BlindfoldedSurgery/terraform-repo-module?ref=v8.0.0"
+  source              = "github.com/BlindfoldedSurgery/terraform-repo-module?ref=v8.0.1"
   name                = "ShutdownServer"
   description         = "HTTP server to remotely trigger shutdowns (and more)"
   default_branch_name = "master"

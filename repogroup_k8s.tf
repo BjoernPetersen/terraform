@@ -20,7 +20,7 @@ module "k8s_repos" {
       required_status_checks = []
     }
   }
-  source      = "github.com/BlindfoldedSurgery/terraform-repo-module?ref=v8.0.0"
+  source      = "github.com/BlindfoldedSurgery/terraform-repo-module?ref=v8.0.1"
   name        = each.key
   description = each.value.description
   required_status_checks = lookup(

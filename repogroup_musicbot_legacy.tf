@@ -1,13 +1,16 @@
 module "musicbot_repo" {
-  source                 = "github.com/BlindfoldedSurgery/terraform-repo-module?ref=v8.0.0"
-  name                   = "MusicBot"
-  default_branch_name    = "develop"
-  description            = "Party music queue with songs from various providers"
+  source              = "github.com/BlindfoldedSurgery/terraform-repo-module?ref=v8.0.0"
+  name                = "MusicBot"
+  default_branch_name = "develop"
+  description         = "Party music queue with songs from various providers"
+
   required_status_checks = []
   blocked_branches       = []
-  enable_actions         = false
-  is_archived            = true
-  enable_argocd_rules    = false
+
+  enable_actions               = false
+  is_archived                  = true
+  include_required_meta_checks = false
+  enable_argocd_rules          = false
 }
 
 module "musicbot_api_repo" {

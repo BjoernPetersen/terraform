@@ -59,10 +59,11 @@ module "adventofcode_repo" {
   name        = "advent-of-code-${each.key}"
   description = "Advent of Code ${each.key} solutions written in ${each.value.language}"
 
-  required_status_checks = each.value.status_checks
-  is_archived            = each.value.is_archived
-  is_public              = each.value.is_public
-  homepage_url           = lookup(each.value, "homepage", null)
+  include_required_meta_checks = !each.value.is_archived
+  required_status_checks       = each.value.status_checks
+  is_archived                  = each.value.is_archived
+  is_public                    = each.value.is_public
+  homepage_url                 = lookup(each.value, "homepage", null)
 
   enable_argocd_rules = false
 }

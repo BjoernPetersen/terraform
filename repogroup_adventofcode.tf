@@ -54,7 +54,7 @@ module "adventofcode_repo" {
     },
   }
 
-  source      = "github.com/BlindfoldedSurgery/terraform-repo-module?ref=v8.0.0"
+  source      = "github.com/BlindfoldedSurgery/terraform-repo-module?ref=v8.0.1"
   name        = "advent-of-code-${each.key}"
   description = "Advent of Code ${each.key} solutions written in ${each.value.language}"
 

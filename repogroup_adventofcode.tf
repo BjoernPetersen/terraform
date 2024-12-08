@@ -47,7 +47,6 @@ module "adventofcode_repo" {
       language    = "Dart",
       homepage    = "https://aoc.bjoernpetersen.net/2024/"
       status_checks = [
-        "Validate Renovate configuration / validate",
         "Test",
         "Check Format",
         "All Build Finished",

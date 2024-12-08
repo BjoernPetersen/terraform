@@ -5,7 +5,6 @@ module "spotify_api_repo" {
   homepage_url       = "https://pub.dev/packages/spotify_api"
   enable_discussions = true
   required_status_checks = [
-    "validate-renovate-config / validate",
     "check-commits / check",
     "Lint",
     "Test",

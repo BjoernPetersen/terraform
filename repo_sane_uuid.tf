@@ -5,7 +5,6 @@ module "sane_uuid_repo" {
   homepage_url       = "https://pub.dev/packages/sane_uuid"
   enable_discussions = true
   required_status_checks = [
-    "validate-renovate-config / validate",
     "Lint",
     "Test",
     "Check Format",

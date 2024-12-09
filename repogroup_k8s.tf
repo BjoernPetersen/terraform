@@ -4,19 +4,18 @@ module "k8s_repos" {
       description = "ArgoCD for home k8s cluster"
     }
     "k8s-argocd-applicationsets" : {
-      description = "ArgoCD Applications for home k8s cluster"
-      enable_actions : false
+      description            = "ArgoCD Applications for home k8s cluster"
       required_status_checks = []
     }
     "k8s-gateway" : {
-      description = "Gateway ingresses on home k8s cluster"
+      description            = "Gateway ingresses on home k8s cluster"
+      required_status_checks = []
     }
     "k8s-namespaces" : {
       description = "Namespaces and permissions as code for home k8s cluster"
     }
     "k8s-postgres" : {
-      description = "Postgres database chart for home k8s setup"
-      enable_actions : false
+      description            = "Postgres database chart for home k8s setup"
       required_status_checks = []
     }
   }

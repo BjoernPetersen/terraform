@@ -4,4 +4,5 @@ module "transbot_repo" {
   description         = "Voice message transcription for Telegram, based on Azure Cognitive Services"
   is_public           = true
   enable_argocd_rules = true
+  is_archived         = true
 }

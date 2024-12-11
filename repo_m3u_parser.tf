@@ -7,6 +7,5 @@ module "m3u_parser_repo" {
     "codecov/patch",
     "SonarCloud Code Analysis",
     "Test and Lint",
-    "WIP",
   ]
 }

@@ -11,6 +11,5 @@ module "spotify_api_repo" {
     "Integration Tests",
     "Check Format",
     "codecov/patch",
-    "WIP",
   ]
 }

@@ -8,7 +8,6 @@ module "sane_uuid_repo" {
     "Lint",
     "Test",
     "Check Format",
-    "WIP",
     "codecov/patch",
   ]
 }

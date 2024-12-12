@@ -9,6 +9,8 @@ module "mixology_api_repo" {
   enable_actions               = false
   required_status_checks       = []
   blocked_branches             = []
+
+  is_archived = true
 }
 
 module "mixology_frontend_repo" {
@@ -22,4 +24,6 @@ module "mixology_frontend_repo" {
   enable_actions               = false
   required_status_checks       = []
   blocked_branches             = []
+
+  is_archived = true
 }

@@ -11,4 +11,6 @@ module "spotify_api_repo" {
 
   required_status_checks = []
   blocked_branches       = []
+
+  is_archived = true
 }

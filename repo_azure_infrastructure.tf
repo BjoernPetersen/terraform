@@ -1,5 +1,5 @@
 module "azure_infrastructure_repo" {
-  source      = "github.com/BlindfoldedSurgery/terraform-repo-module?ref=v8.0.1"
+  source      = "github.com/BlindfoldedSurgery/terraform-repo-module?ref=v8.0.2"
   name        = "azure-infrastructure"
   description = "Basic infrastructure in Azure for personal projects"
   required_status_checks = [

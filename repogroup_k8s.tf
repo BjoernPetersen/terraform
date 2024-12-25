@@ -7,10 +7,6 @@ module "k8s_repos" {
       description            = "ArgoCD Applications for home k8s cluster"
       required_status_checks = []
     }
-    "k8s-gateway" : {
-      description            = "Gateway ingresses on home k8s cluster"
-      required_status_checks = []
-    }
     "k8s-namespaces" : {
       description = "Namespaces and permissions as code for home k8s cluster"
     }

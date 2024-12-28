@@ -6,10 +6,7 @@ module "nightscout_repo" {
   is_public           = false
   enable_argocd_rules = false
 
-  required_status_checks = []
-}
-
-import {
-  id = "nightscout-helm"
-  to = module.nightscout_repo.github_repository.main
+  required_status_checks = [
+    "post-build-container-image",
+  ]
 }

@@ -3,7 +3,7 @@ module "nightscout_repo" {
   name        = "nightscout-helm"
   description = "Helm Chart for Nightscout"
 
-  is_public           = false
+  is_public           = true
   enable_argocd_rules = false
 
   required_status_checks = [

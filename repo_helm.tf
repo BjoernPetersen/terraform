@@ -4,7 +4,6 @@ module "helm_repo" {
   description = "Container image based on Debian with kubectl and helm installed"
   required_status_checks = [
     "check / check",
-    "build-container-image (amd64) / build",
-    "build-container-image (arm64) / build",
+    "post-build-container-image",
   ]
 }

@@ -1,5 +1,5 @@
 module "cosee_repo_list_repo" {
-  source                 = "github.com/BlindfoldedSurgery/terraform-repo-module?ref=v8.0.3"
+  source                 = "github.com/BlindfoldedSurgery/terraform-repo-module?ref=v9.0.2"
   name                   = "cosee-repo-list"
   description            = "Automated documentation of my personal projects"
   is_public              = false

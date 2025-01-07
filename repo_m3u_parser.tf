@@ -1,5 +1,5 @@
 module "m3u_parser_repo" {
-  source             = "github.com/BlindfoldedSurgery/terraform-repo-module?ref=v8.0.3"
+  source             = "github.com/BlindfoldedSurgery/terraform-repo-module?ref=v9.0.2"
   name               = "m3u-parser"
   description        = "An M3U parser written in Kotlin"
   enable_discussions = true

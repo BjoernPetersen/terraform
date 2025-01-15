@@ -1,5 +1,5 @@
 module "sane_uuid_repo" {
-  source             = "github.com/BlindfoldedSurgery/terraform-repo-module?ref=v9.1.1"
+  source             = "github.com/BlindfoldedSurgery/terraform-repo-module?ref=v9.1.2"
   name               = "sane_uuid"
   description        = "UUID generation and parsing with a reasonable interface"
   homepage_url       = "https://pub.dev/packages/sane_uuid"

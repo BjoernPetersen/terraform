@@ -1,5 +1,5 @@
 module "cloudflare_dyndns_repo" {
-  source              = "github.com/BlindfoldedSurgery/terraform-repo-module?ref=v9.0.2"
+  source              = "github.com/BlindfoldedSurgery/terraform-repo-module?ref=v9.1.1"
   name                = "cloudflare-dyndns"
   description         = "FRITZ!Box-compatible DynDNS service for a Cloudflare-managed DNS zone"
   is_public           = false

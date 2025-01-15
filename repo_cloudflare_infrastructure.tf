@@ -1,5 +1,5 @@
 module "cloudflare_infrastructure_repo" {
-  source      = "github.com/BlindfoldedSurgery/terraform-repo-module?ref=v9.0.2"
+  source      = "github.com/BlindfoldedSurgery/terraform-repo-module?ref=v9.1.1"
   name        = "cloudflare-infrastructure"
   description = "Basic infrastructure in Cloudflare for personal projects"
   required_status_checks = [

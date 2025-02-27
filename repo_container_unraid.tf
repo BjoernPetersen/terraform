@@ -1,5 +1,5 @@
 module "container_unraid_repo" {
-  source      = "github.com/BlindfoldedSurgery/terraform-repo-module?ref=v9.1.3"
+  source      = "github.com/BlindfoldedSurgery/terraform-repo-module?ref=v9.2.0"
   name        = "container-unraid"
   description = "Mirrored images used by Unraid"
 

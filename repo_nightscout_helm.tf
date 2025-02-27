@@ -1,5 +1,5 @@
 module "nightscout_repo" {
-  source      = "github.com/BlindfoldedSurgery/terraform-repo-module?ref=v9.1.3"
+  source      = "github.com/BlindfoldedSurgery/terraform-repo-module?ref=v9.2.0"
   name        = "nightscout-helm"
   description = "Helm Chart for Nightscout"
 

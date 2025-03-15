@@ -12,6 +12,10 @@ locals {
       domain         = "blindfolded.surgery"
       gsa_identifier = "bs-dns"
     }
+    "home-dns-config" : {
+      domain         = "is-ho.me"
+      gsa_identifier = "home-dns"
+    }
     "wg-dns-config" : {
       domain         = "kasino-wg.party"
       gsa_identifier = "wg-dns"

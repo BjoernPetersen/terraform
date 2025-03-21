@@ -1,34 +1,39 @@
 module "adventofcode_repo" {
   for_each = {
     "2018" = {
-      is_archived   = true,
-      is_public     = false,
-      language      = "Dart",
-      status_checks = [],
+      is_archived              = true,
+      is_public                = false,
+      language                 = "Dart",
+      enable_branch_protection = false,
+      status_checks            = [],
     },
     "2019" = {
-      is_archived   = true,
-      is_public     = true,
-      language      = "Dart",
-      status_checks = [],
+      is_archived              = true,
+      is_public                = true,
+      language                 = "Dart",
+      enable_branch_protection = false,
+      status_checks            = [],
     },
     "2020" = {
-      is_archived   = true,
-      is_public     = true,
-      language      = "Rust",
-      status_checks = [],
+      is_archived              = true,
+      is_public                = true,
+      language                 = "Rust",
+      enable_branch_protection = false,
+      status_checks            = [],
     },
     "2021" = {
-      is_archived   = true,
-      is_public     = false,
-      language      = "Python",
-      status_checks = [],
+      is_archived              = true,
+      is_public                = false,
+      language                 = "Python",
+      enable_branch_protection = false,
+      status_checks            = [],
     },
     "2022" = {
-      is_archived   = true,
-      is_public     = true,
-      language      = "Python",
-      status_checks = [],
+      is_archived              = true,
+      is_public                = true,
+      language                 = "Python",
+      enable_branch_protection = false,
+      status_checks            = [],
     },
     "2023" = {
       is_archived = true,
@@ -42,12 +47,12 @@ module "adventofcode_repo" {
       ],
     },
     "2024" = {
-      is_archived         = false,
-      include_meta_checks = false
-      is_public           = true,
-      language            = "Dart",
-      homepage            = "https://aoc.bjoernpetersen.net/2024/"
-      status_checks       = [],
+      is_archived              = false,
+      enable_branch_protection = false,
+      is_public                = true,
+      language                 = "Dart",
+      homepage                 = "https://aoc.bjoernpetersen.net/2024/"
+      status_checks            = [],
     },
   }
 
@@ -55,7 +60,8 @@ module "adventofcode_repo" {
   name        = "advent-of-code-${each.key}"
   description = "Advent of Code ${each.key} solutions written in ${each.value.language}"
 
-  include_required_meta_checks = !each.value.is_archived && lookup(each.value, "include_meta_checks", true)
+  protect_default_branch       = lookup(each.value, "enable_branch_protection", true)
+  include_required_meta_checks = !each.value.is_archived
   required_status_checks       = each.value.status_checks
   is_archived                  = each.value.is_archived
   is_public                    = each.value.is_public

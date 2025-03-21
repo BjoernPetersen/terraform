@@ -42,11 +42,12 @@ module "adventofcode_repo" {
       ],
     },
     "2024" = {
-      is_archived   = false,
-      is_public     = true,
-      language      = "Dart",
-      homepage      = "https://aoc.bjoernpetersen.net/2024/"
-      status_checks = [],
+      is_archived         = false,
+      include_meta_checks = false
+      is_public           = true,
+      language            = "Dart",
+      homepage            = "https://aoc.bjoernpetersen.net/2024/"
+      status_checks       = [],
     },
   }
 
@@ -54,7 +55,7 @@ module "adventofcode_repo" {
   name        = "advent-of-code-${each.key}"
   description = "Advent of Code ${each.key} solutions written in ${each.value.language}"
 
-  include_required_meta_checks = !each.value.is_archived
+  include_required_meta_checks = !each.value.is_archived && lookup(each.value, "include_meta_checks", true)
   required_status_checks       = each.value.status_checks
   is_archived                  = each.value.is_archived
   is_public                    = each.value.is_public

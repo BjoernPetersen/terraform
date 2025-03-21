@@ -7,8 +7,3 @@ module "oauth_ingress_helm_repo" {
 
   required_status_checks = []
 }
-
-import {
-  id = "oauth-ingress-helm"
-  to = module.oauth_ingress_helm_repo.github_repository.main
-}

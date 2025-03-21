@@ -42,7 +42,7 @@ module "adventofcode_repo" {
       ],
     },
     "2024" = {
-      is_archived = true,
+      is_archived = false,
       is_public   = true,
       language    = "Dart",
       homepage    = "https://aoc.bjoernpetersen.net/2024/"

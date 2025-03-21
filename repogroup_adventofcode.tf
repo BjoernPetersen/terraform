@@ -42,15 +42,11 @@ module "adventofcode_repo" {
       ],
     },
     "2024" = {
-      is_archived = false,
-      is_public   = true,
-      language    = "Dart",
-      homepage    = "https://aoc.bjoernpetersen.net/2024/"
-      status_checks = [
-        "Test",
-        "Check Format",
-        "All Build Finished",
-      ],
+      is_archived   = false,
+      is_public     = true,
+      language      = "Dart",
+      homepage      = "https://aoc.bjoernpetersen.net/2024/"
+      status_checks = [],
     },
   }
 

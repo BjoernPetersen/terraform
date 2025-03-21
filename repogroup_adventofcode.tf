@@ -47,7 +47,7 @@ module "adventofcode_repo" {
       ],
     },
     "2024" = {
-      is_archived              = false,
+      is_archived              = true,
       enable_branch_protection = false,
       is_public                = true,
       language                 = "Dart",
